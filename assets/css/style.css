@@ -1,0 +1,202 @@
+/* Icônes Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+:root {
+    --primary: rgb(63, 81, 181);
+    --text-color: rgb(255,255,255);
+    --text-picture-color: rgb(204, 204, 204);
+}
+
+/******************** 
+* Headers, paragraphs
+********************/
+h1 {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 51px;
+    margin: 51px 0 51px 0;
+    text-align: center;
+}
+
+h2 {
+    color: var(--text-picture-color);
+    font-size: 1.11em;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    font-size: 21px;
+}
+
+/********** 
+* Scrollbar
+**********/
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color:  var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: var(--primary);
+}
+
+/**************** 
+* Project summary
+****************/
+.summary {
+    background-color: var(--primary);
+    border-radius: 15px;
+    color: var(--text-color);
+    padding: 31px;
+    text-align: center;
+}
+
+/******** 
+* Filters
+********/
+.filters {
+    text-align: center;
+}
+
+.filterButton {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.filterButton:hover,
+.filterButton:focus,
+.filterButton.active {
+    background-color: var(--primary);
+    color:  var(--text-color);
+    outline: none;
+}
+
+/********* 
+* Pictures
+*********/
+.galleryItem {
+    cursor: pointer;
+    margin: 0px;
+    padding: 0;
+    position: relative;
+}
+
+.galleryItem .img-info {
+    background: rgba(0, 0, 0, 0.5);
+    color:  var(--text-color);
+    display: none;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: 2s;
+    transition: 2s;
+}
+
+.galleryItem:hover .img-info {
+    display: block;
+    -webkit-transition: 2s;
+    transition: 2s;
+}
+
+/************** 
+* Picture Modal
+**************/
+#caption {
+    color: var(--text-picture-color);
+    display: block;
+    font-size: 51px;
+    height: 251px;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 90%;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 91vh;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Zoom in the Modal Animation */
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/******** 
+* Footer
+********/
+.bottomFooter {
+    background-color: var(--primary);
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.githubIcon,
+.githubIcon:hover {
+    background-color: #171515;
+    color:  var(--text-color);
+}
+
+.linkedInIcon,
+.linkedInIcon:hover {
+    background-color: #0e76a8;
+    color:  var(--text-color);
+}
+
+.mailIcon,
+.mailIcon:hover {
+    background-color: #000080;
+    color:  var(--text-color);
+}
+
+.mySiteIcon,
+.mySiteIcon:hover {
+    background-color: rgb(63, 81, 181);
+    color: rgb(255,255,255);
+}
